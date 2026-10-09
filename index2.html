@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vault Vent — Investment Overview</title>
+<style>
+  * { box-sizing: border-box; }
+  :root {
+    --bg: #03060d;
+    --panel: #070d17;
+    --panel2: #0a101c;
+    --border: #26364f;
+    --red: #ff2747;
+    --red2: #ff4b5f;
+    --blue: #9baeff;
+    --muted: #7e91ba;
+    --white: #f7f8fb;
+    --green: #00efb0;
+    --purple: #a95dff;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(33,47,86,.13), transparent 38%),
+      var(--bg);
+    color: var(--white);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .page {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 22px 26px 34px;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-weight: 800;
+    font-size: 27px;
+    letter-spacing: -.8px;
+  }
+  .brand .vault { color: #f1f2f7; }
+  .brand .vent { color: #ff3654; }
+  .shield {
+    width: 55px;
+    height: 55px;
+    color: #ff5a68;
+  }
+  .signout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #9aaeff;
+    font-size: 20px;
+  }
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin: 0 0 15px;
+    letter-spacing: -1.1px;
+  }
+  .subtitle {
+    margin: 0;
+    color: #91a6e9;
+    font-size: 22px;
+  }
+  .quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  button {
+    font: inherit;
+    cursor: pointer;
+  }
+  .outline-btn {
+    min-width: 224px;
+    height: 55px;
+    border: 2px solid var(--red);
+    border-radius: 30px;
+    color: #ff4560;
+    background: rgba(255,28,65,.025);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 17px;
+  }
+  .outline-btn .arrow { margin-left: 2px; font-size: 28px; line-height: 1; }
+  .card {
+    border: 2px solid var(--border);
+    border-radius: 17px;
+    background: linear-gradient(145deg, rgba(15,21,33,.9), rgba(4,9,16,.9));
+    box-shadow: inset 0 0 24px rgba(22,35,63,.08);
+  }
+  .balance {
+    border-color: var(--red);
+    min-height: 153px;
+    padding: 24px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 19px;
+    background: linear-gradient(110deg, rgba(49,16,25,.48), rgba(10,13,21,.75));
+  }
+  .balance-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .iconbox {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    background: rgba(255,32,68,.11);
+    color: #ff4562;
+  }
+  .balance-label {
+    color: #9baeff;
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+  .balance-value {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1.8px;
+  }
+  .trend {
+    color: var(--green);
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .trend span { color: #92a5dc; margin-left: 7px; }
+  .deposit {
+    width: 233px;
+    height: 61px;
+    border: 0;
+    border-radius: 34px;
+    background: linear-gradient(100deg, #ff4e5e, #ff6670);
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 0 25px rgba(255,57,79,.12);
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .stat {
+    min-height: 187px;
+    padding: 15px 17px 13px;
+  }
+  .stat .stat-icon {
+    width: 51px;
+    height: 51px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 7px;
+  }
+  .greenbox { color: #00e9ad; background: rgba(0,235,173,.12); }
+  .redbox { color: #ff5266; background: rgba(255,42,70,.13); }
+  .purplebox { color: #b267ff; background: rgba(168,85,255,.14); }
+  .stat-name {
+    color: #9baeff;
+    font-size: 20px;
+    margin-bottom: 1px;
+  }
+  .stat-value {
+    font-size: 37px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+  }
+  .stat-foot {
+    font-size: 17px;
+    color: var(--green);
+    margin-top: 8px;
+    white-space: nowrap;
+  }
+  .stat-foot.muted { color: #91a3d3; font-size: 16px; }
+  .transactions {
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .section-head {
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #25324a;
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .clock {
+    width: 37px;
+    height: 37px;
+    border: 4px solid #ff4560;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #ff4560;
+    position: relative;
+  }
+  .clock:before {
+    content:"";
+    width: 3px;
+    height: 11px;
+    background: currentColor;
+    position:absolute;
+    top: 7px;
+    left: 14px;
+  }
+  .clock:after {
+    content:"";
+    width: 9px;
+    height: 3px;
+    background: currentColor;
+    position:absolute;
+    top: 16px;
+    left: 14px;
+    transform: rotate(25deg);
+    transform-origin: left center;
+  }
+  .viewall {
+    color: #ff4660;
+    font-size: 17px;
+  }
+  .transaction {
+    min-height: 67px;
+    padding: 8px 17px;
+    display: grid;
+    grid-template-columns: 49px 1fr auto;
+    align-items: center;
+    gap: 13px;
+    border-bottom: 1px solid #202c42;
+  }
+  .transaction:last-child { border-bottom: 0; }
+  .tx-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+  }
+  .tx-icon.up { background: rgba(0,239,176,.16); color: #00efb0; }
+  .tx-icon.down { background: rgba(255,37,65,.18); color: #ff4059; }
+  .tx-name { font-size: 17px; font-weight: 600; }
+  .tx-date { color: #7f98df; font-size: 15px; margin-top: 1px; }
+  .tx-amount { font-size: 20px; color: #00efb0; font-weight: 700; }
+  .tx-amount.negative { color: #ff465a; }
+  .withdrawal {
+    border-color: var(--red);
+    padding: 17px 20px;
+    min-height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(105deg, rgba(52,14,25,.42), rgba(11,13,21,.8));
+    margin-bottom: 9px;
+  }
+  .withdraw-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .withdraw-icon {
+    width: 68px;
+    height: 68px;
+    border: 2px solid #ff2d4a;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #ff4760;
+    background: rgba(255,32,62,.05);
+  }
+  .withdraw-title { font-size: 20px; font-weight: 800; }
+  .pending { color: #ff3953; font-size: 18px; font-weight: 700; margin: 2px 0; }
+  .withdraw-sub { color: #9aa9d1; font-size: 14px; }
+  .eta {
+    border: 2px solid #ff344f;
+    color: #ff5668;
+    border-radius: 27px;
+    padding: 10px 16px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap;
+  }
+  .info {
+    height: 49px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    font-size: 15px;
+    color: #91a4d4;
+  }
+  .fee { color: #f1f3fa; font-weight: 700; font-size: 17px; }
+  .address {
+    height: 62px;
+    padding: 0 17px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #91a4d4;
+    font-size: 15px;
+  }
+  .address strong { color: #8fa4d6; font-weight: 500; overflow-wrap: anywhere; }
+  .copy {
+    margin-left: auto;
+    border: 2px solid #ff3150;
+    color: #ff4b61;
+    background: transparent;
+    border-radius: 24px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  svg { width: 28px; height: 28px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .tiny svg { width: 22px; height: 22px; }
+  @media (max-width: 680px) {
+    .page { padding: 16px 14px 28px; }
+    .topbar { margin-bottom: 28px; }
+    .brand { font-size: 22px; }
+    .shield { width: 45px; height: 45px; }
+    .signout { font-size: 16px; }
+    .intro { grid-template-columns: 1fr; }
+    h1 { font-size: 29px; }
+    .subtitle { font-size: 18px; }
+    .quick-actions { flex-direction: row; }
+    .outline-btn { min-width: 0; flex: 1; font-size: 14px; height: 48px; }
+    .balance { align-items: flex-start; flex-direction: column; gap: 18px; }
+    .balance-value { font-size: 42px; }
+    .deposit { width: 100%; }
+    .stats { gap: 8px; }
+    .stat { padding: 12px 10px; min-height: 168px; }
+    .stat-value { font-size: 29px; }
+    .stat-name { font-size: 16px; }
+    .stat-foot { font-size: 13px; }
+    .section-title { font-size: 19px; }
+    .transaction { grid-template-columns: 42px 1fr auto; padding: 8px 11px; }
+    .tx-icon { width: 40px; height: 40px; }
+    .tx-amount { font-size: 16px; }
+    .withdrawal { align-items: flex-start; gap: 10px; }
+    .withdraw-left { gap: 10px; }
+    .withdraw-icon { width: 55px; height: 55px; }
+    .eta { padding: 7px 9px; font-size: 12px; }
+    .address { align-items: flex-start; height: auto; min-height: 62px; padding-top: 11px; padding-bottom: 11px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">
+      <svg class="shield" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 5 53 12v17c0 14-8.6 24-21 30C19.6 53 11 43 11 29V12z" stroke-width="4"/>
+        <path d="M32 20c-7 0-12 5-12 12 0 6 5 11 12 11s12-5 12-11c0-7-5-12-12-12Z" stroke-width="3"/>
+        <path d="M27 30h10M32 26v9" stroke-width="3"/>
+      </svg>
+      <span class="vault">Vault</span><span class="vent">Vent</span>
+    </div>
+    <div class="signout">
+      <span>⇥</span><span>Sign Out</span>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div>
+      <h1>Welcome back, Vent User</h1>
+      <p class="subtitle">Here’s your investment overview</p>
+    </div>
+    <div class="quick-actions">
+      <button class="outline-btn" onclick="alert('How It Works')">
+        <span class="tiny">▣</span> How It Works <span class="arrow">›</span>
+      </button>
+      <a href="https://t.me/datavestlive_support">
+      <button class="outline-btn" onclick="alert('Support')">
+        <span class="tiny">◉</span> Get Support <span class="arrow">›</span></a>
+      </button>
+    </div>
+  </section>
+
+  <section class="balance card">
+    <div class="balance-left">
+      <div class="iconbox"><span style="font-size:31px">▣</span></div>
+      <div>
+        <div class="balance-label">Vault Total Balance</div>
+        <div class="balance-value">$239.00</div>
+        <div class="trend">↗ $9.57% <span>Mega </span></div>
+      </div>
+    </div>
+    <a href="index3.html">
+    <button class="deposit" onclick="alert('Deposit Funds')">⇧ &nbsp; View Taps<b>›</b></button></a>
+  </section>
+
+  <section class="stats">
+    <div class="stat card">
+      <div class="stat-icon greenbox">↗</div>
+      <div class="stat-name">Total Earned</div>
+      <div class="stat-value">$285.22</div>
+      <div class="stat-foot">↗ +12.4% <span style="color:#91a3d3">vs. last 7 days</span></div>
+    </div>
+    <div class="stat card">
+      <div class="stat-icon redbox">▣</div>
+      <div class="stat-name">Total Withdrawn</div>
+      <div class="stat-value">$204.98</div>
+      <div class="stat-foot muted">No withdrawals yet</div>
+    </div>
+    <div class="stat card">
+      <div class="stat-icon purplebox">♧</div>
+      <div class="stat-name">Earnings Breakdown</div>
+      <div class="stat-value">$209.05</div>
+      <div class="stat-foot">● <span style="margin-left:4px">Investment Return</span></div>
+    </div>
+  </section>
+
+  <section class="transactions card">
+    <div class="section-head">
+      <div class="section-title"><span class="clock"></span> Recent Transactions</div>
+      <div class="viewall">View All ›</div>
+    </div>
+
+    <div class="transaction">
+      <div class="tx-icon up">↑</div>
+      <div><div class="tx-name">Withdrawal</div><div class="tx-date">Oct 7,2026</div></div>
+      <div class="tx-amount">+$25.28</div>
+    </div>
+    <div class="transaction">
+      <div class="tx-icon up">↗</div>
+      <div><div class="tx-name">Earnings</div><div class="tx-date">Oct 7,2026</div></div>
+      <div class="tx-amount">+$28.32</div>
+    </div>
+    <div class="transaction">
+      <div class="tx-icon down">↓</div>
+      <div><div class="tx-name">Withdrawal  <span style="font-weight:400"></span></div><div class="tx-date">Oct 4,2026</div></div>
+      <div class="tx-amount negative">-$36.00</div>
+    </div>
+    <div class="transaction">
+      <div class="tx-icon up">↑</div>
+      <div><div class="tx-name">Earnings</div><div class="tx-date">Sep 27,2026</div></div>
+      <div class="tx-amount">+$19.00</div>
+    </div>
+  </section>
+
+  <section class="withdrawal card">
+    <div class="withdraw-left">
+      <div class="withdraw-icon">▣</div>
+      <div>
+        <div class="withdraw-title">Withdrawal Status</div>
+        <div class="pending">Pending Approval</div>
+        <div class="withdraw-sub">Your withdrawal request is being processed.</div>
+      </div>
+    </div>
+    <div class="eta">◷ &nbsp; ETA: 24–48 hours</div>
+  </section>
+
+  <div class="info card">
+    <span>ⓘ &nbsp; Withdrawal activation fee :</span>
+    <span class="fee">$150.00</span>
+  </div>
+
+  <div class="address card">
+    <span style="font-size:23px">♧</span>
+    <span>Address:</span>
+    <strong>0x4F7025BbC994552fa811D4a0dAC092F973934993</strong>
+    <button class="copy" onclick="navigator.clipboard?.writeText('0x4F7025BbC994552fa811D4a0dAC092F973934993'); window.location.href='index3.html';">Withdrawable</button>
+  </div>
+</div>
+</body>
+</html>
